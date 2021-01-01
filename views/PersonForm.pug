@@ -1,0 +1,87 @@
+doctype html
+head
+  title Movie Page
+  link(type='text/css' href='/styles/movie.css' rel='stylesheet')
+
+body.body()
+    .buffer
+    .gridContainer
+        // This is the sticky navigation bar
+        include ./partials/navbar.pug
+        .gridItem.gridItem2(style ="grid-column-start: 1; grid-column-end: 6;")
+            if requestingUser.isContributing
+                form(id = "form" action = "/people" method = "post" autocomplete="on")
+                    fieldset
+                        legend Basic Info
+                        label(for = "name") Full Name*: 
+                        input(type = "text" name = "name" required)
+                        br
+                        br
+                        label(for = "pic")  URL to Image of Person: 
+                        input(type = "text" name = "pic")
+                        br
+                        br
+
+                    fieldset
+                        legend Works:
+                        div(style = "color: red;")
+                            |Don't see the movie you want? 
+                            a(href = "/movieform")
+                                | Click here to add it!
+                        br
+
+
+                        p Select what role you want to add to!
+                        br
+                        input#directedRadio(name = 'ignore' type='radio' checked)
+                        | Directed
+                        br
+                        input#writtenRadio(name = 'ignore' type='radio')
+                        | Wrote
+                        br
+                        input#actedRadio(name = 'ignore' type='radio')
+                        | Acted in
+                        br
+
+                        br
+                        p Type in a title here! 
+                        input#movieNameInput(name = "movie" type = "text")
+                        br
+                        p Click on a movie below to add it! Click on it again to remove!
+
+                        hr
+                        div#movieList
+                        hr
+
+
+                        label(for = "directed") Movies Directed: 
+                        select#directed(name="directed" size = "6" multiple disabled)
+
+                        br
+                        br
+
+                        label(for = "written") Movies Written: 
+                        select#written(name="written" size = "6" multiple disabled)
+
+                        br
+                        br
+
+
+                        label(for = "acted") Movies Acted: 
+                        select#acted(name="acted" size = "6" multiple disabled)
+
+                        br
+                    br
+                    br
+                    input(type = "hidden" name = "secret" value = "superSecretPassCode")
+                    button.button(id = "submitButt" type = "button" name = "submitButt" value = "superSecretPassCode" style ="color: white; border: none; border-radius: 5px; padding: 1% 5%; margin-left: 5%; margin-bottom: 5%; background-color: #45BD62;") Submit!
+                    br
+                    br
+  
+
+            else
+                h1 You must be a contributing user to add a movie!
+
+    script(src='/JS/search.js')
+    script(src='/JS/addPerson.js')
+    

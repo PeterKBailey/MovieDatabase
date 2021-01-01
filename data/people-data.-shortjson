@@ -1,0 +1,882 @@
+{
+  "John Lasseter": {
+    "name": "John Lasseter",
+    "directed": [
+      "Toy Story"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": ["otheruser"],
+    "pic": ""
+  },
+  "Pete Docter": {
+    "name": "Pete Docter",
+    "directed": [],
+    "written": [
+      "Toy Story"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Andrew Stanton": {
+    "name": "Andrew Stanton",
+    "directed": [],
+    "written": [
+      "Toy Story"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Joe Ranft": {
+    "name": "Joe Ranft",
+    "directed": [],
+    "written": [
+      "Toy Story"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Joss Whedon": {
+    "name": "Joss Whedon",
+    "directed": [],
+    "written": [
+      "Toy Story"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Joel Cohen": {
+    "name": "Joel Cohen",
+    "directed": [],
+    "written": [
+      "Toy Story"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Alec Sokolow": {
+    "name": "Alec Sokolow",
+    "directed": [],
+    "written": [
+      "Toy Story"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Tom Hanks": {
+    "name": "Tom Hanks",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Toy Story"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Tim Allen": {
+    "name": "Tim Allen",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Toy Story"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Don Rickles": {
+    "name": "Don Rickles",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Toy Story"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jim Varney": {
+    "name": "Jim Varney",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Toy Story"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Joe Johnston": {
+    "name": "Joe Johnston",
+    "directed": [
+      "Jumanji"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jonathan Hensleigh": {
+    "name": "Jonathan Hensleigh",
+    "directed": [],
+    "written": [
+      "Jumanji"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Greg Taylor": {
+    "name": "Greg Taylor",
+    "directed": [],
+    "written": [
+      "Jumanji"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jim Strain": {
+    "name": "Jim Strain",
+    "directed": [],
+    "written": [
+      "Jumanji"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Chris Van Allsburg": {
+    "name": "Chris Van Allsburg",
+    "directed": [],
+    "written": [
+      "Jumanji"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Robin Williams": {
+    "name": "Robin Williams",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Jumanji"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jonathan Hyde": {
+    "name": "Jonathan Hyde",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Jumanji"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Kirsten Dunst": {
+    "name": "Kirsten Dunst",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Jumanji"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Bradley Pierce": {
+    "name": "Bradley Pierce",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Jumanji"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Howard Deutch": {
+    "name": "Howard Deutch",
+    "directed": [
+      "Grumpier Old Men"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Mark Steven Johnson": {
+    "name": "Mark Steven Johnson",
+    "directed": [],
+    "written": [
+      "Grumpier Old Men"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Walter Matthau": {
+    "name": "Walter Matthau",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Grumpier Old Men"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jack Lemmon": {
+    "name": "Jack Lemmon",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Grumpier Old Men"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Sophia Loren": {
+    "name": "Sophia Loren",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Grumpier Old Men"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Ann-Margret": {
+    "name": "Ann-Margret",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Grumpier Old Men"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Forest Whitaker": {
+    "name": "Forest Whitaker",
+    "directed": [
+      "Waiting to Exhale"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Terry McMillan": {
+    "name": "Terry McMillan",
+    "directed": [],
+    "written": [
+      "Waiting to Exhale"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Ronald Bass": {
+    "name": "Ronald Bass",
+    "directed": [],
+    "written": [
+      "Waiting to Exhale"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Whitney Houston": {
+    "name": "Whitney Houston",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Waiting to Exhale"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Angela Bassett": {
+    "name": "Angela Bassett",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Waiting to Exhale"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Loretta Devine": {
+    "name": "Loretta Devine",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Waiting to Exhale"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Lela Rochon": {
+    "name": "Lela Rochon",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Waiting to Exhale"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Charles Shyer": {
+    "name": "Charles Shyer",
+    "directed": [
+      "Father of the Bride Part II"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Albert Hackett": {
+    "name": "Albert Hackett",
+    "directed": [],
+    "written": [
+      "Father of the Bride Part II"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Frances Goodrich": {
+    "name": "Frances Goodrich",
+    "directed": [],
+    "written": [
+      "Father of the Bride Part II"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Nancy Meyers": {
+    "name": "Nancy Meyers",
+    "directed": [],
+    "written": [
+      "Father of the Bride Part II"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Steve Martin": {
+    "name": "Steve Martin",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Father of the Bride Part II"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Diane Keaton": {
+    "name": "Diane Keaton",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Father of the Bride Part II"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Martin Short": {
+    "name": "Martin Short",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Father of the Bride Part II"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Kimberly Williams-Paisley": {
+    "name": "Kimberly Williams-Paisley",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Father of the Bride Part II"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Michael Mann": {
+    "name": "Michael Mann",
+    "directed": [
+      "Heat"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Al Pacino": {
+    "name": "Al Pacino",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Heat"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Robert De Niro": {
+    "name": "Robert De Niro",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Heat"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Val Kilmer": {
+    "name": "Val Kilmer",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Heat"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jon Voight": {
+    "name": "Jon Voight",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Heat"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Sydney Pollack": {
+    "name": "Sydney Pollack",
+    "directed": [
+      "Sabrina"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Samuel A. Taylor": {
+    "name": "Samuel A. Taylor",
+    "directed": [],
+    "written": [
+      "Sabrina"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Billy Wilder": {
+    "name": "Billy Wilder",
+    "directed": [],
+    "written": [
+      "Sabrina"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Ernest Lehman": {
+    "name": "Ernest Lehman",
+    "directed": [],
+    "written": [
+      "Sabrina"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Barbara Benedek": {
+    "name": "Barbara Benedek",
+    "directed": [],
+    "written": [
+      "Sabrina"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "David Rayfiel": {
+    "name": "David Rayfiel",
+    "directed": [],
+    "written": [
+      "Sabrina"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Harrison Ford": {
+    "name": "Harrison Ford",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sabrina"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Julia Ormond": {
+    "name": "Julia Ormond",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sabrina"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Greg Kinnear": {
+    "name": "Greg Kinnear",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sabrina"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Nancy Marchand": {
+    "name": "Nancy Marchand",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sabrina"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Peter Hewitt": {
+    "name": "Peter Hewitt",
+    "directed": [
+      "Tom and Huck"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Mark Twain": {
+    "name": "Mark Twain",
+    "directed": [],
+    "written": [
+      "Tom and Huck"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Stephen Sommers": {
+    "name": "Stephen Sommers",
+    "directed": [],
+    "written": [
+      "Tom and Huck"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "David Loughery": {
+    "name": "David Loughery",
+    "directed": [],
+    "written": [
+      "Tom and Huck"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jonathan Taylor Thomas": {
+    "name": "Jonathan Taylor Thomas",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Tom and Huck"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Brad Renfro": {
+    "name": "Brad Renfro",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Tom and Huck"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Eric Schweig": {
+    "name": "Eric Schweig",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Tom and Huck"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Charles Rocket": {
+    "name": "Charles Rocket",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Tom and Huck"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Peter Hyams": {
+    "name": "Peter Hyams",
+    "directed": [
+      "Sudden Death"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Karen Elise Baldwin": {
+    "name": "Karen Elise Baldwin",
+    "directed": [],
+    "written": [
+      "Sudden Death"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Gene Quintano": {
+    "name": "Gene Quintano",
+    "directed": [],
+    "written": [
+      "Sudden Death"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jean-Claude Van Damme": {
+    "name": "Jean-Claude Van Damme",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sudden Death"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Powers Boothe": {
+    "name": "Powers Boothe",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sudden Death"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Raymond J. Barry": {
+    "name": "Raymond J. Barry",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sudden Death"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Whittni Wright": {
+    "name": "Whittni Wright",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "Sudden Death"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Martin Campbell": {
+    "name": "Martin Campbell",
+    "directed": [
+      "GoldenEye"
+    ],
+    "written": [],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Ian Fleming": {
+    "name": "Ian Fleming",
+    "directed": [],
+    "written": [
+      "GoldenEye"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Michael France": {
+    "name": "Michael France",
+    "directed": [],
+    "written": [
+      "GoldenEye"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Jeffrey Caine": {
+    "name": "Jeffrey Caine",
+    "directed": [],
+    "written": [
+      "GoldenEye"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Bruce Feirstein": {
+    "name": "Bruce Feirstein",
+    "directed": [],
+    "written": [
+      "GoldenEye"
+    ],
+    "acted": [],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Pierce Brosnan": {
+    "name": "Pierce Brosnan",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "GoldenEye"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Sean Bean": {
+    "name": "Sean Bean",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "GoldenEye"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Izabella Scorupco": {
+    "name": "Izabella Scorupco",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "GoldenEye"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  },
+  "Famke Janssen": {
+    "name": "Famke Janssen",
+    "directed": [],
+    "written": [],
+    "acted": [
+      "GoldenEye"
+    ],
+    "collaborators": [],
+    "followers": [],
+    "pic": ""
+  }
+}

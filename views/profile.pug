@@ -1,0 +1,103 @@
+doctype html
+head
+    title My Profile
+    link(type='text/css' href='/styles/profile.css' rel='stylesheet')
+// I use a css grid layout with divs to structure the page
+body.body(onload = "init()")
+    .buffer
+    .gridContainer
+        // This is the sticky navigation bar
+        include ./partials/navbar.pug
+        //- .gridItem.gridItem1
+        //-     h1 Movie Database
+        //-         img#pp(style='float: right; margin-right: 3%; margin-top: 1%;' src='/images/Eminem.png' alt='Profile Picture' height='50px' width='50px')
+        //-     input#search.inputText(type='text' placeholder='Search')
+        // Movie Poster
+        .gridItem.gridItem2.center
+            img#pp.image(src=user.profilepic alt='Profile Picture')
+        // This is just user info
+        .gridItem.gridItem3
+            p#username.title= user.username +" "
+                input.button#logout(type='button' value='Log Out' style = "float: right; margin-right:2%;")
+            p.registration= user.dateRegistered
+            // Not sure why but Had to put style here to get it to work
+            if user.isContributing
+                input#userTypeRegular.userType(style='margin-left:5%;' type='radio' name='userType' value='regular')
+                |  Regular
+                input#userTypeContributor.userType(type='radio' name='userType' value='contributor' checked)
+                |  Contributor
+            else
+                input#userTypeRegular.userType(style='margin-left:5%;' type='radio' name='userType' value='regular' checked)
+                |  Regular
+                input#userTypeContributor.userType(type='radio' name='userType' value='contributor')
+                |  Contributor
+        // Empty spaces
+        .gridItem.gridItem4
+        .gridItem.gridItem5
+        // This is where the followers are stored
+        .gridItem.gridItem6
+            p.title Followers
+            each follower in user.followers
+                a(href=`/users/${follower}`)
+                    p= follower
+        // Who the user follows
+        #following.gridItem.gridItem7
+            p.title Following 
+                input.button#unfollow(type='button' value='unfollow')
+                
+            h2 Users
+            div#usersFollowing
+                each username in user.usersFollowing
+                    input(type = "checkbox" id = username)
+                    a(href=`/users/${username}`)
+                        = username
+                    br           
+            h2 People
+            div#peopleFollowing
+                each personName in user.peopleFollowing
+                    input(type = "checkbox" id = personName)
+                    a(href=`/people/${personName}`)
+                        = personName
+                    br   
+        // This is just all the movie recommendations
+        .gridItem.gridItem8.center
+            h1#recommendedHeader Recommended Movies
+        
+
+        -let id = 9
+        each movie in user.recommended
+            if id<17
+                a(class = "gridItem" class = "gridItem" + id class = "center"   href = "/movies/"+movie.title)                    
+                    img.image.center(src=movie.poster alt = 'Movie Poster')
+                -id++
+
+        // And here are the user's reviews
+        .gridItem.gridItem17
+            p.title Reviews 
+            each reviewObject, movieTitle in reviews
+                a(href = "/movies/"+ movieTitle)
+                    p= "For: " + movieTitle
+                p= "Uploaded " + reviewObject.datePosted 
+                p= `Rating: ${reviewObject.rating.toFixed(1)}/10` 
+                p= reviewObject.content
+                br
+        .gridItem.gridItem18
+            h1 My Feed 
+                if user.notifications.length > 0
+                    input.button#clearFeed(type='button' value='clear feed' style = "padding: 1%; margin-top:0%;")
+            hr
+            ul
+                each notification in user.notifications
+                    li
+                        p= notification
+                
+        .gridItem.gridItem19
+           
+            
+                
+        // I Just copied the movies used in the recommended section to show what the previously viewed section might look like
+        -id = 19
+
+    script(src='/JS/search.js')
+    script(src='/JS/userprofile.js')
+    

@@ -1,0 +1,189 @@
+@import url("links.css");
+
+
+/* set up the body, make backrgound black and set font*/
+.body{
+    /*background-image: linear-gradient(to bottom right,#011f4b,#6497b1);*/
+    background-color: #18191A;
+    font-family: Verdana;
+    color: #E4E6EB;
+    margin:0
+    /*overflow-y:scroll;*/
+}
+
+/* make the grid container and set up 3 columns with minimum and max size */
+.gridContainer{
+    display:grid;
+    grid-template-columns: repeat(7,1fr);
+    /* Let the grid grow to fill the size of the content */
+    grid-auto-rows: minmax(60px,auto);
+    grid-gap:15px;
+}
+
+/* This sets up the grid items generally to be grey rounded boxes */
+.gridItem{
+    /*border: solid black;*/
+    background-color: #242526;   
+    border-radius: 10px;
+    /* Needed this because in order to create my nav bar I had to make the body margin 0 */
+}
+/* for grids that have centered content */
+.middle{
+    text-align: center;
+
+}
+
+
+/*just to keep the header spread a bit from the walls of any div*/
+h1{
+    margin:0px;
+    margin-top:1%;
+    margin-left:1%;
+    color:#2D86FF
+}
+/* Keep paragraphs nice and separate from others */
+p{
+    margin:0px;
+    margin-top:2%;
+    margin-bottom:1%;
+    margin-left:2%;
+}
+/*buffer for nav bar*/
+.buffer{
+    padding: 4%;
+}
+/* top nav bar */
+.gridItem1{
+    position: fixed;
+    top: 0;
+    width:100%;
+    grid-column-start: 1;
+    grid-column-end: 8;
+    border-radius: 0px;
+    border-bottom:2px solid #393A3B;
+    margin:0px;
+    color: #2D86FF;
+    box-shadow: 1px 1px 5px 5px;
+ }
+/* Search bar */
+ #search{
+        padding: 5px 5px;
+        margin-left: 20px;
+        margin-top:5px;
+        margin-bottom:10px;
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+ }
+/* for image class, forces image to be same size as grid item*/
+.image{
+    max-width:100%;
+    max-height:100%;
+    /* clip: rect(0px,200px,200px,0px); */
+}
+
+#pp{
+    border-radius: 50%;
+}
+/* Stores the movie poster */
+.gridItem2{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start:1;
+    grid-row-end: 3;
+    margin-left:15%;
+    background-color: transparent;
+}
+/* Stretches the poster to fit inside the grid box, without altering the aspect ratio */
+#movieposter{
+    height:75%;
+    width:75%;
+    object-fit:contain; 
+}
+.poster{ 
+    /* height:75%;
+    width:75%; */
+    object-fit:contain;
+    margin: 2%;
+    border: 3px solid black ; 
+}
+
+/* Now for the general movie info */
+.gridItem3{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start:1;
+    grid-row-end: 2;
+    background-color: transparent;
+}
+
+
+
+/* For the movies in the grid */
+#similar{
+    max-width: 80%;
+    max-height: 100%;
+    object-fit:contain; 
+}
+
+/* Cast members */
+.gridItem4{
+    grid-column-start: 6;
+    grid-column-end: 8;
+    grid-row-start:2;
+    grid-row-end: 5;
+    /* background-color: transparent; */
+}
+
+
+.gridItem5{
+    margin-left:5%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start:3;
+    grid-row-end: 4;
+}
+
+
+.gridItem6{
+    margin-left:5%;
+    padding-left: 5%;
+    padding-right:5%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start:3;
+    grid-row-end: 5;
+    margin-bottom: 10%;
+    overflow-x:hidden; 
+}
+
+/* input box for reviews */
+#reviewText{
+    margin: 2%;
+    padding: 1%;
+    width: 70%;
+    font-size: 12pt;
+}
+
+.button{
+    color: white;
+    font-family:Verdana;
+    border: none;
+    border-radius: 5px;
+    padding: 1% 5%;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+#follow{
+    background-color: #45BD62;
+}
+#unfollow{
+    background-color: #F23E5C;
+}
+/* For the movies in the grid */
+#similar{
+    max-width: 50%;
+    max-height: 50%;
+    object-fit:contain; 
+}

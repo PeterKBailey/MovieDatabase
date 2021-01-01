@@ -1,0 +1,12 @@
+.gridItem.gridItem1
+    h1
+        | Movie Database
+        if !requestingUser.username
+            a(href = "/login")
+                h1(style='float: right; margin-right: 3%; margin-top: 0%; padding-bottom: 1%;') Log In
+        else
+            a(href = "/users/" + requestingUser.username)
+                img#pp(style='float: right; margin-right: 3%; margin-top: 1%;' src= requestingUser.profilepic alt='Profile Picture' height='50px' width='50px')
+            if requestingUser.numNewNotifs > 0
+                p(style = 'float: right; margin-right: 3%; margin-top: 1%;')= requestingUser.numNewNotifs
+    input#search.inputText(type='text' placeholder='Search')

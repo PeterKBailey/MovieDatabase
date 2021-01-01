@@ -1,0 +1,106 @@
+doctype html
+head
+  title Movie Page
+  link(type='text/css' href='/styles/movie.css' rel='stylesheet')
+
+body.body()
+    .buffer
+    .gridContainer
+        // This is the sticky navigation bar
+        include ./partials/navbar.pug
+        .gridItem.gridItem2(style ="grid-column-start: 1; grid-column-end: 6;")
+            if requestingUser.isContributing
+                form(id = "form" action = "/movies" method = "post" autocomplete="on")
+                    fieldset
+                        legend Basic Info
+                        label(for = "title") Title*: 
+                        input(type = "text" name = "title" required)
+                        br
+                        br
+                        label(for = "poster") Poster Image URL: 
+                        input(type = "text" name = "poster")
+                        br
+                        br
+                        label(for = "releaseYear") Release Year*: 
+                        input(type = "text" name = "releaseYear" required)
+                        br
+                        br
+                        label(for = "country") Country*: 
+                        input(type = "text" name = "country" required)
+                        br
+                        br
+                        label(for = "plot") Plot*: 
+                        input(type = "text" name = "plot" required)
+                        br
+                        br
+                        label(for = "runtime") Run Time*: 
+                        input(type = "text" name = "runtime" required)
+                        br
+                        br
+                        label(for = "genres") Genres (Select multiple with control/command):  
+                        select#genres(name="genres" size = "6" multiple)
+                            each genre in genres
+                                option#genre(value = genre)
+                                    = genre
+                        br
+                    fieldset
+                        legend People Involved:
+                        div(style = "color: red;")
+                            |Don't see who you want? 
+                            a(href = "/personform")
+                                | Click here to add them!
+                        br
+                        p Select what role you want to add to!
+                        br
+                        input#directorsRadio(name = 'ignore' type='radio' value='movies' checked)
+                        | Directors
+                        br
+                        input#writersRadio(name = 'ignore' type='radio' value='people')
+                        | Writers
+                        br
+                        input#actorsRadio(name = 'ignore' type='radio' value='users')
+                        | Actors
+                        br
+
+                        br
+                        p Type in a name here! 
+                        input#personNameInput(name = "person" type = "text")
+                        br
+                        p Click on a person below to add them! Click on them again to remove!
+
+                        hr
+                        div#peopleList
+                        hr
+
+
+                        label(for = "directors") Selected Directors: 
+                        select#directors(name="directors" size = "6" multiple disabled)
+
+                        br
+                        br
+
+                        label(for = "writers") Selected Writers: 
+                        select#writers(name="writers" size = "6" multiple disabled)
+
+                        br
+                        br
+
+
+                        label(for = "actors") Selected Actors: 
+                        select#actors(name="actors" size = "6" multiple disabled)
+
+                        br
+                    br
+                    br
+                    input(type = "hidden" name = "secret" value = "superSecretPassCode")
+                    button.button(id = "submitButt" type = "button" name = "submitButt" value = "superSecretPassCode" style ="color: white; border: none; border-radius: 5px; padding: 1% 5%; margin-left: 5%; margin-bottom: 5%; background-color: #45BD62;") Submit!
+                    br
+                    br
+                    
+
+            else
+                h1 You must be a contributing user to add a movie!
+
+    script(src='/JS/search.js')
+    script(src='/JS/addMovie.js')
+    

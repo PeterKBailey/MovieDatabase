@@ -1,0 +1,150 @@
+doctype html
+head
+  title Search Results
+  link(type='text/css' href='/styles/searchresults.css' rel='stylesheet')
+
+body.body
+    .buffer
+    .gridContainer
+        // This is the sticky navigation bar
+        include ./partials/navbar.pug
+        //- .gridItem.gridItem1
+        //-     h1 Movie Database 
+        //-         img#pp(style='float: right; margin-right: 3%; margin-top: 1%;' src='/images/Eminem.png' alt='Profile Picture' height='50px' width='50px')
+        //-     input#search.inputText(type='text' placeholder='Search')
+        // The first grid Item is the search options, filter and sorting
+        .gridItem.gridItem2
+            // The sorting options
+            h1 What are you looking for?
+            if type == "movie"
+                input#movies(type='radio' name='type' value='movies' checked)
+                | Movies
+                br
+                input#people(type='radio' name='type' value='people')
+                | People
+                br
+                input#users(type='radio' name='type' value='users')
+                | Users
+                br
+            else if type == "person"
+                input#movies(type='radio' name='type' value='movies')
+                | Movies
+                br
+                input#people(type='radio' name='type' value='people' checked)
+                | People
+                br
+                input#users(type='radio' name='type' value='users')
+                | Users
+                br
+            else if type == "user"
+                input#movies(type='radio' name='type' value='movies')
+                | Movies
+                br
+                input#people(type='radio' name='type' value='people')
+                | People
+                br
+                input#users(type='radio' name='type' value='users' checked)
+                | Users
+                br
+            else
+                input#movies(type='radio' name='type' value='movies' checked)
+                | Movies
+                br
+                input#people(type='radio' name='type' value='people')
+                | People
+                br
+                input#users(type='radio' name='type' value='users')
+                | Users
+                br
+
+            // The filter options
+            h1 Movie Filters
+            ul#filters(style='list-style-type:none;')
+                
+                li
+                | Genre
+                br
+                ul(style='list-style-type:none;')
+                    each genre in genres
+                        li
+                            input(id = genre+"Genre" type="radio" name = "genre" value = genre)
+                            = genre
+                            br
+                    li
+                        input(id = "noSelection" type="radio" name = "genre" value = "" checked)
+                        |No Preference
+                        br
+                br      
+                li
+                    |Person involved:
+                    br
+                    br
+                    input#person(name = "person" type = "text")
+                    //- select#person(name="person" size = "6")
+                    //-     each person in people
+                    //-         option(id = person value = person)
+                    //-             = person
+                    //- This is where the people will be as they are found
+                    hr
+                    div#peopleList
+                    hr
+                br
+                li
+                    | Released (year)
+                    input#releaseYear(type="number" step = 1)
+
+                br
+                li
+                    | Rating higher than
+                    input#ratingVal(type="number" step = 0.5 min="1" max="10")
+                br
+            // A button that will let users add a movie when it doesn't show up in their search
+            div(style = "color: red; margin-left:5%;")
+                |Can't find what you're looking for? 
+                if(!requestingUser.username)
+                    a(href = "/login")
+                        | Sign in as a contributing user to add it!
+                else if(!requestingUser.isContributing)
+                    a(href = "/users/" + requestingUser.username)
+                        | Change to a contributing user to add it!
+            //- p(style='margin-left: 5%;') Can't find what you're looking for? Sign in as a contributing user to add it!
+            if type == "movie" && requestingUser.isContributing
+                input#addMovie.button.add(type='button' value='Add Movie')
+            if type == "person" && requestingUser.isContributing
+                input#addPerson.button.add(type='button' value='Add Person')
+        // The next is a container holding all the search results, each result is another container holding two pieces of info: the poster and the details
+        .gridItem.gridItem3.searchContainer
+            each item in Found
+                //- p= "By: " + review.poster 
+                
+                .gridItem.search
+                    .gridItem.innerItem.poster
+                        -let page = ""
+                        if type == "movie"
+                            -page = "/movies/" + item.title;
+                            a(href = page )
+                                img.image(src=item.poster alt='Movie Poster')
+                        else if type == "person"
+                            -page = "/people/" + item.name;
+                            a(href = page )
+                                img.image(src=item.pic onerror = "this.src='https://www.pphfoundation.ca/wp-content/uploads/2018/05/default-avatar.png';" alt='Person Picture')
+                        else if type == "user"
+                            -page = "/users/" + item.username;
+                            a(href = page )
+                                img.image(src=item.profilepic onerror = "this.src='https://i0.wp.com/www.mvhsoracle.com/wp-content/uploads/2018/08/default-avatar.jpg?ssl=1';" alt='profile picture')
+                    .gridItem.innerItem.movieInfo
+                        if type == "movie"
+                            a(href = page)
+                                h1=  item.title
+                            p= "Release Year: " +  item.releaseYear
+                            p= "Average Rating: " + item.averageRating
+                            p= "Runtime: " + item.runtime
+                            p= "Country: " + item.country
+                            p= "Plot:\n" + item.plot
+                        else if type == "person"
+                            a(href = page)
+                                h1=  item.name
+                        else if type == "user"
+                            a(href = page)
+                                h1=  item.username
+    script(src='/JS/searchpage.js')
