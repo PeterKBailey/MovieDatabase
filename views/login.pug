@@ -1,0 +1,21 @@
+doctype html
+head
+  title Login Page
+  link(href='/styles/login.css' rel='stylesheet')
+// Use css grid layout to center elements
+body.body(onload = "init()")
+  .container
+    .gridItem.gridItem1
+      div
+        input#username.inputText(type='text' placeholder='Username')
+      br
+      div
+        input#password.inputText(type='text' placeholder='Password')
+      br
+      div
+        input#login.continue(type='button' value='Log In')
+      br
+      div
+        input#signup.continue(type='button' value='Sign Up')
+      br
+  script(src='/JS/login.js')

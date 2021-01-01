@@ -1,0 +1,107 @@
+doctype html
+head
+  title Movie Page
+  link(type='text/css' href='/styles/movie.css' rel='stylesheet')
+
+body.body(onload="init()")
+  .buffer
+  .gridContainer
+    // This is the sticky navigation bar
+    include ./partials/navbar.pug
+    //- .gridItem.gridItem1
+    //-   h1
+    //-     | Movie Database
+    //-     img#pp(style='float: right; margin-right: 3%; margin-top: 1%;' src='/images/Eminem.png' alt='Profile Picture' height='50px' width='50px')
+    //-   input#search.inputText(type='text' placeholder='Search')
+    .gridItem.gridItem2
+      
+      img#movieposter(src=movie.poster alt='Movie Poster')
+    // All the general info that will be displayed
+    #basicInfo.gridItem.gridItem3
+      h1=  movie.title +" "
+        input.edit(type = "button" id = "editMovie")
+        //- called removable because these are things removed when editing
+      div#removable 
+        p= "Release Year: " +  movie.releaseYear + " "
+        
+        p Genres: 
+          each genre in movie.genres
+            //- the link will be for searching by genre
+            a(href = "/movies/?genre="+genre)
+              = genre
+            = ", " 
+
+        p= "Average Rating: " + movie.averageRating.toFixed(1)
+        
+
+        p= "Runtime: " + movie.runtime + " "
+
+        p= "Country: " + movie.country + " "
+
+        p= "Plot:\n" + movie.plot + " "
+      
+      p Directors: 
+        each director in movie.directors
+          a(href = "/people/"+director)
+            = director
+          = ", " 
+
+      p Writers: 
+        each writer in movie.writers
+          //- the link will be for searching by genre
+          a(href = "/people/"+writer)
+            = writer
+          = ", " 
+
+        
+    // Similar Movies?
+    .gridItem.gridItem4.middle
+      h1 Similar
+      each movieObj in similar
+          hr
+          br
+          a(href = "/movies/" + movieObj.title)
+            img#similar(src= movieObj.poster alt='Movie Poster')
+          br
+          br
+      br
+    // Cast Members
+    .gridItem.gridItem5
+      h1 Cast
+      - let isFirst = true
+      p
+        each actor in movie.actors
+          //- the link will be for searching by genre
+          if !isFirst
+            =", "
+          a(href = "/people/"+actor)
+            = actor
+          - isFirst = false
+          
+    // Reviews Header
+    .gridItem.gridItem6
+      h1 Reviews
+      p= "Average Rating: " + movie.averageRating.toFixed(1)
+
+      
+    // Actual reviews
+    #reviews.gridItem.gridItem7
+      each review in movie.reviews
+        -let by = review.user
+        a(href=`/users/${by}`)
+          p= "By: " + review.user 
+        p= "Uploaded " + review.datePosted 
+        p= `Rating: ${review.rating.toFixed(1)}/10` 
+        p= review.content
+        br
+
+        hr
+      input(type = "text" id = "reviewText")
+      input(type="number" id="ratingNum" step = 0.5 min="1" max="10")
+      //- input(type = "text" id = "ratingBox")
+      input(type = "button" id = "addReview" value = "Add Review")
+      // These are made with js and new reviews can be added
+  script(src='/JS/search.js')
+  script(src='/JS/addReview.js')
+  script(src='/JS/editMovie.js')
+

@@ -1,0 +1,71 @@
+| !DOCTYPE html&gt;
+head
+  title= user.username
+  link(type='text/css' href='/styles/otheruser.css' rel='stylesheet')
+  
+body.body 
+  // I use a css grid layout with divs to structure the page
+  .buffer
+  .gridContainer
+    // This is the sticky navigation bar
+    include ./partials/navbar.pug
+    //- .gridItem.gridItem1
+    //-   h1
+    //-     | Movie Database
+    //-     img#pp(style='float: right; margin-right: 3%; margin-top: 1%;' src='/images/Eminem.png' alt='Profile Picture' height='50px' width='50px')
+    //-   input#search.inputText(type='text' placeholder='Search')
+    // Profile Picture
+    .gridItem.gridItem2.center
+      img#pp.image(src=user.profilepic onerror = "this.src='https://i0.wp.com/www.mvhsoracle.com/wp-content/uploads/2018/08/default-avatar.jpg?ssl=1';" alt='Profile Picture')
+    // This is just user info
+    .gridItem.gridItem3
+      p.title= user.username
+        if requestingUser.username
+          if user.followers.includes(requestingUser.username)
+            input#unfollow.button(type='button' value='unfollow')
+          else
+            input#follow.button(type='button' value='follow')
+        else
+          h2 Log in to follow this user!
+      p.registration= user.dateRegistered
+        
+    // Empty spaces
+    .gridItem.gridItem4
+    .gridItem.gridItem5
+    // This is where the followers are stored
+    .gridItem.gridItem6
+      p.title Followers
+      each follower in user.followers
+        a(href=`/users/${follower}`)
+          p= follower
+          
+
+        
+    // Who the user follows - okay now theres an issue here because they might follow either people or other users so how do I deal with that?
+    #following.gridItem.gridItem7
+      #list
+        p.title Following
+        h2 Users
+        each username in user.usersFollowing
+          a(href=`/users/${username}`)
+            =username
+          br           
+        h2 People
+        each person in user.peopleFollowing
+          a(href="/people/"+person)
+            =person
+          br
+
+    // And here are the user's reviews
+    .gridItem.gridItem8
+      //the reviews object stores reviews as movie titles: review object
+      p.title Reviews 
+      each reviewObject, movieTitle in reviews
+        a(href = "/movies/"+ movieTitle)
+          p= "For: " + movieTitle
+        p= "Uploaded " + reviewObject.datePosted 
+        p= `Rating: ${reviewObject.rating.toFixed(1)}/10` 
+        p= reviewObject.content
+        br
+  script(src='/JS/search.js')
+  script(src='/JS/follow.js')

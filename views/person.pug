@@ -1,0 +1,60 @@
+doctype html
+head
+  title Person Page
+  link(type='text/css' href='/styles/person.css' rel='stylesheet')
+body.body
+    .buffer
+    .gridContainer
+        // This is the sticky navigation bar
+        include ./partials/navbar.pug
+        //- .gridItem.gridItem1
+        //-     h1 Movie Database
+        //-         img#pp(style='float: right; margin-right: 3%; margin-top: 1%;' src='/images/Eminem.png' alt='Profile Picture' height='50px' width='50px')
+        //-     input#search.inputText(type='text' placeholder='Search')
+        .gridItem.gridItem2
+            img#movieposter(src= person.pic onerror = "this.src='https://www.pphfoundation.ca/wp-content/uploads/2018/05/default-avatar.png';" alt='picture of person')
+        // All the general info that will be displayed
+        .gridItem.gridItem3
+            h1= person.name
+            //- p= person.dob
+            br
+            if requestingUser.username
+                if !person.followers.includes(requestingUser.username)
+                    input#follow.button(type='button' value='follow')
+                else
+                    input#unfollow.button(type='button' value='unfollow')
+            else
+                h2 Log in to follow this person!
+
+        // Projects they're known for
+        // Collaborators
+        .gridItem.gridItem4.middle
+            h1 Users Also Search For
+            each collaborator in collaborators
+                hr
+                a(href = "/people/"+collaborator.name)
+                    p=collaborator.name
+                    img#similar(src= collaborator.pic alt='Person Picture')
+            
+        // Known For Header
+        //- .gridItem.gridItem5
+        // What they're known for
+        #knownFor.gridItem.gridItem6
+            h1 Known For
+
+            //- so this method won't work if i want the pictures of the movies they acted in, i could on the server find all of them and pass them in tho
+            h2(style = "color: #EE21A6;") Directed:
+            each movieTitle in person.directed
+                a(href=`/movies/${movieTitle}`)
+                    h4(style = "padding-left: 2%;")= movieTitle
+            h2(style = "color: #EE21A6;") Wrote:
+            each movieTitle in person.written
+                a(href=`/movies/${movieTitle}`)
+                    h4(style = "padding-left: 2%; ")= movieTitle
+            h2(style = "color: #EE21A6;") Acted In:
+            each movieTitle in person.acted
+                a(href=`/movies/${movieTitle}`)
+                    h4(style = "padding-left: 2%;")= movieTitle 
+
+    script(src='/JS/search.js')
+    script(src='/JS/follow.js')

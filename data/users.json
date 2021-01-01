@@ -1,0 +1,30 @@
+{
+    "peterbailey":{
+        "username": "peterbailey",
+        "password": "movies1",
+        "dateRegistered": "Some Date",
+        "isContributing": true,
+        "followers": ["otheruser"],
+        "usersFollowing": ["otheruser"],
+        "peopleFollowing": [],
+        "reviews": [],
+        "notifications": [],
+        "favorites": [],
+        "recommended": [],
+        "profilepic": "https://us.123rf.com/450wm/claudiodivizia/claudiodivizia1802/claudiodivizia180200519/96500884-high-contrast-waxing-crescent-moon-seen-with-an-astronomical-telescope-square-1-1-format-taken-with-.jpg?ver=6"
+    },
+    "otheruser":{
+        "username": "otheruser",
+        "password": "movies11",
+        "dateRegistered": "Some Date",
+        "isContributing": false,
+        "followers": ["peterbailey"],
+        "usersFollowing": ["peterbailey"],
+        "peopleFollowing": [],
+        "reviews": [],
+        "notifications": [],
+        "favorites": [],
+        "recommended":[],
+        "profilepic": "https://interactive-examples.mdn.mozilla.net/media/cc0-images/grapefruit-slice-332-332.jpg"
+    }
+}

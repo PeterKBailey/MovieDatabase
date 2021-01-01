@@ -1,0 +1,57 @@
+/* Specifies div as grid box */
+.container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	/* grid-template-rows: repeat(3, 1fr); */
+	grid-auto-rows: minmax(100px,auto);
+	grid-gap:15px;
+
+}
+/* Style the background */
+.body{
+    background-color: #18191A;
+    font-family: Verdana;
+    color: #E4E6EB;
+    margin:0
+}
+
+/* Style the buttons */
+.continue{
+	background-color: transparent;
+	border: solid #2D86FF;
+	color: white;
+	/* y,x */
+	padding: 8px 50px;
+	/* margin:30px; */
+	border-radius: 10px;
+	text-align: center;
+	font-size: 14px;
+	font-family: Verdana;
+}
+/* alter the padding for the signup button */
+#signup{
+	padding: 8px 46px
+}
+/* Style the input textboxes */
+.inputText{
+	padding: 5px 5px;
+	/* margin-top: 50px; */
+	background-color: transparent;
+	border: none;
+	border-bottom: 2px solid white;
+	color: white;
+}
+/* placeholder text styling */
+::placeholder{
+	color: white;
+	opacity: 1;
+}
+
+/* Place gridItem in the grid and center objects within */
+.gridItem1{
+	text-align: center;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 2;
+	grid-row-end: 4;
+}
